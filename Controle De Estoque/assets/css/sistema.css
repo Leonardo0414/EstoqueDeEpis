@@ -1,0 +1,80 @@
+/* Define variáveis de estilo globais que podem ser reutilizadas em todo o documento. */
+:root {
+    --primary-color: #007bff; /* Cor primária usada em botões e barras. */
+    --bg-color-light: #f0f0f0; /* Cor de fundo clara (modo claro). */
+    --bg-color-dark: #1e1e1e; /* Cor de fundo escura (modo escuro). */
+    --text-color-light: #000; /* Cor do texto no modo claro. */
+    --text-color-dark: #fff; /* Cor do texto no modo escuro. */
+    --card-bg-light: #fff; /* Cor de fundo dos cartões no modo claro. */
+    --card-bg-dark: #2a2a2a; /* Cor de fundo dos cartões no modo escuro. */
+    --icon-color-dark: #fff; /* Cor dos ícones no modo escuro. */
+    --button-bg-light: #007bff; /* Cor de fundo dos botões no modo claro. */
+    --button-bg-dark: #444; /* Cor de fundo dos botões no modo escuro. */
+}
+
+/* Estiliza o corpo da página no modo claro. */
+body {
+    background-color: var(--bg-color-light); /* Usa a cor de fundo clara. */
+    color: var(--text-color-light); /* Define a cor do texto clara. */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave ao alternar estilos. */
+}
+
+/* Estiliza o corpo da página no modo escuro. */
+body.dark-mode {
+    background-color: var(--bg-color-dark); /* Cor de fundo escura. */
+    color: var(--text-color-dark); /* Cor do texto no modo escuro. */
+}
+
+/* Estiliza os cartões no modo escuro. */
+.dark-mode .card {
+    background-color: var(--card-bg-dark); /* Cor de fundo do cartão no modo escuro. */
+    color: var(--text-color-dark); /* Cor do texto no cartão no modo escuro. */
+}
+
+/* Estiliza botões no modo escuro. */
+.dark-mode .btn {
+    background-color: var(--button-bg-dark); /* Cor de fundo do botão no modo escuro. */
+    color: var(--text-color-dark); /* Cor do texto no botão no modo escuro. */
+}
+
+/* Barra superior da página. */
+.top-bar {
+    padding: 10px 20px; /* Espaçamento interno. */
+    background-color: #007bff; /* Cor de fundo da barra superior (azul). */
+    display: flex; /* Usa flexbox para alinhar os itens. */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles. */
+    align-items: center; /* Alinha os itens verticalmente no centro. */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.973); /* Adiciona sombra com um leve efeito de destaque. */
+}
+
+/* Contêiner da dashboard com layout em grade. */
+.dashboard-container {
+    display: grid; /* Define o layout como grade. */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cria colunas flexíveis de no mínimo 250px. */
+    gap: 20px; /* Espaçamento entre os itens da grade. */
+    padding: 20px; /* Espaçamento interno no contêiner. */
+}
+
+/* Estilo dos cartões do projeto. */
+.card {
+    background-color: var(--card-bg-light); /* Cor de fundo do cartão no modo claro. */
+    padding: 20px; /* Espaçamento interno do cartão. */
+    border-radius: 10px; /* Bordas arredondadas. */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma leve sombra. */
+    text-align: center; /* Centraliza o texto dentro do cartão. */
+}
+/* RODAPE */
+.footer-bar {
+    background-color: #343a40; 
+    color: #ffffff;            
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;            
+    box-sizing: border-box;
+}

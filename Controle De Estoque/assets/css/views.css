@@ -1,0 +1,100 @@
+/* Define variáveis de estilo globais para cores e padrões reutilizáveis em todo o CSS. */
+:root {
+    --primary-color: #007bff; /* Cor principal (usada para botões ou destaque). */
+    --bg-color-light: #f0f0f0; /* Cor de fundo para o modo claro. */
+    --bg-color-dark: #1e1e1e; /* Cor de fundo para o modo escuro. */
+    --text-color-light: #000; /* Cor do texto no modo claro. */
+    --text-color-dark: #fff; /* Cor do texto no modo escuro. */
+    --card-bg-light: #fff; /* Cor de fundo para caixas ou cartões no modo claro. */
+    --card-bg-dark: #2a2a2a; /* Cor de fundo para caixas ou cartões no modo escuro. */
+    --input-bg: #ffffff; /* Cor de fundo para campos de entrada (inputs). */
+    --input-border: #ced4da; /* Cor da borda para campos de entrada (inputs). */
+}
+
+/* Estiliza o corpo da página. */
+body {
+    background-color: var(--bg-color-light); /* Cor de fundo clara. */
+    color: var(--text-color-light); /* Cor do texto clara. */
+    transition: background-color 0.3s, color 0.3s; /* Suave transição entre cores ao alternar temas. */
+    font-family: 'Arial', sans-serif; /* Fonte principal do texto. */
+}
+
+/* Estiliza um contêiner principal com largura máxima e centralizado na página. */
+.container {
+    max-width: 960px; /* Define a largura máxima como 960px. */
+    margin: 20px auto; /* Adiciona margem superior/inferior e centraliza horizontalmente. */
+    padding: 15px; /* Espaçamento interno do contêiner. */
+    background: var(--card-bg-light); /* Cor de fundo do cartão (modo claro). */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adiciona uma leve sombra. */
+    border-radius: 8px; /* Bordas arredondadas. */
+}
+
+/* Estiliza rótulos (labels) nos formulários. */
+.form-label {
+    font-weight: bold; /* Define o texto como negrito. */
+    margin-bottom: 5px; /* Adiciona espaçamento inferior. */
+}
+
+/* Grupo de entrada, usado para alinhar inputs e botões. */
+.input-group {
+    margin-bottom: 15px; /* Espaçamento inferior entre grupos de entrada. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+}
+
+/* Estiliza botões dentro de grupos de entrada. */
+.input-group button {
+    margin-left: 10px; /* Adiciona espaçamento à esquerda do botão. */
+}
+
+/* Estiliza campos de entrada de texto, data, número e menus suspensos. */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%; /* O campo ocupa toda a largura disponível. */
+    padding: 8px; /* Adiciona preenchimento interno ao campo. */
+    border: 1px solid var(--input-border); /* Define a borda com uma cor clara. */
+    border-radius: 4px; /* Bordas arredondadas. */
+    background-color: var(--input-bg); /* Cor de fundo do campo de entrada. */
+}
+
+/* Estiliza áreas de texto (textarea). */
+textarea {
+    width: 100%; /* A área de texto ocupa toda a largura disponível. */
+    padding: 8px; /* Adiciona preenchimento interno. */
+    border: 1px solid var(--input-border); /* Define a borda. */
+    border-radius: 4px; /* Bordas arredondadas. */
+    background-color: var(--input-bg); /* Cor de fundo. */
+    resize: vertical; /* Permite redimensionar verticalmente apenas. */
+}
+
+/* Estiliza botões gerais. */
+button {
+    cursor: pointer; /* Define o cursor como "ponteiro" ao passar o mouse. */
+}
+
+/* Adiciona efeito visual ao passar o mouse sobre botões. */
+button:hover {
+    opacity: 0.8; /* Reduz a opacidade para 80%, criando um efeito de "hover". */
+}
+
+/* Estilos responsivos para dispositivos com largura máxima de 768px. */
+@media (max-width: 768px) {
+    /* Reorganiza os itens do grupo de entrada em coluna. */
+    .input-group {
+        flex-direction: column; /* Os itens são dispostos verticalmente. */
+    }
+
+    /* Campos e botões ocupam 100% da largura disponível. */
+    .input-group button,
+    .input-group input,
+    .input-group select {
+        width: 100%;
+    }
+
+    /* Adiciona margem superior e remove a margem lateral nos botões. */
+    .input-group button {
+        margin-top: 10px; /* Espaçamento superior. */
+        margin-left: 0; /* Remove o espaçamento à esquerda. */
+    }
+}

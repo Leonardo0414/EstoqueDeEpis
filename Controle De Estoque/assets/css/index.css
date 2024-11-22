@@ -1,0 +1,161 @@
+/* Importa a fonte 'Noto Sans' do Google Fonts com pesos 400 (normal) e 700 (negrito). */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+/* Remove margens padrão do corpo e define a fonte global como 'Noto Sans'. */
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Aplica o modelo de box-sizing para incluir bordas e preenchimentos no cálculo de tamanho de elementos. */
+body * {
+  box-sizing: border-box;
+}
+
+/* Define um contêiner principal para a tela de login ocupando 100% da largura e altura da janela. */
+.main-login {
+  width: 100vw; /* Largura total da janela. */
+  height: 100vh; /* Altura total da janela. */
+  background: #201b2c; /* Cor de fundo roxa escura. */
+  display: flex; /* Utiliza flexbox para alinhar elementos. */
+  justify-content: center; /* Centraliza horizontalmente os filhos. */
+  align-items: center; /* Centraliza verticalmente os filhos. */
+}
+
+/* Define a seção esquerda da tela de login. */
+.left-login {
+  width: 50vw; /* Ocupa metade da largura da janela. */
+  height: 100vh; /* Ocupa toda a altura da janela. */
+  display: flex; /* Utiliza flexbox para alinhar elementos. */
+  justify-content: center; /* Centraliza horizontalmente. */
+  align-items: center; /* Centraliza verticalmente. */
+  flex-direction: column; /* Organiza os filhos em coluna. */
+}
+
+/* Estiliza o título dentro da seção esquerda. */
+.left-login > h1 {
+  color: #77ffc0; /* Cor verde clara. */
+  font-size: 2.5vw; /* Tamanho do texto relativo à largura da janela. */
+}
+
+/* Define a largura da imagem dentro da seção esquerda. */
+.left-login-image {
+  width: 35vw; /* Largura relativa à janela. */
+}
+
+/* Define a seção direita da tela de login. */
+.right-login {
+  width: 50vw; /* Ocupa metade da largura da janela. */
+  height: 100vh; /* Ocupa toda a altura da janela. */
+  display: flex; /* Utiliza flexbox para alinhar elementos. */
+  justify-content: center; /* Centraliza horizontalmente. */
+  align-items: center; /* Centraliza verticalmente. */
+}
+
+/* Estiliza o cartão de login. */
+.card-login {
+  width: 60%; /* Ocupa 60% da largura da seção direita. */
+  display: flex; /* Utiliza flexbox para alinhar os elementos. */
+  justify-content: center; /* Centraliza horizontalmente. */
+  align-items: center; /* Centraliza verticalmente. */
+  flex-direction: column; /* Organiza os elementos em coluna. */
+  padding: 30px 35px; /* Adiciona preenchimento interno ao cartão. */
+  background: #2f2841; /* Cor de fundo roxa escura. */
+  border-radius: 20px; /* Bordas arredondadas. */
+  box-shadow: 0px 10px 40px #00000056; /* Adiciona sombra ao cartão. */
+}
+
+/* Estiliza o título dentro do cartão de login. */
+.card-login > h1 {
+  color: #00ff88; /* Cor verde neon. */
+  font-weight: 800; /* Texto em negrito. */
+  margin: 0; /* Remove margens ao redor do título. */
+}
+
+/* Define o estilo das áreas de entrada de texto (inputs) e seus rótulos. */
+.textfield {
+  width: 100%; /* Ocupa 100% da largura do cartão. */
+  display: flex; /* Utiliza flexbox. */
+  flex-direction: column; /* Organiza elementos em coluna. */
+  align-items: flex-start; /* Alinha itens à esquerda. */
+  justify-content: center; /* Centraliza verticalmente. */
+  margin: 10px 0px; /* Espaçamento vertical entre os campos. */
+}
+
+/* Estiliza os campos de entrada de texto dentro das textfields. */
+.textfield > input {
+  width: 100%; /* Ocupa toda a largura disponível. */
+  border: none; /* Remove borda padrão. */
+  border-radius: 10px; /* Bordas arredondadas. */
+  padding: 15px; /* Adiciona preenchimento interno. */
+  background: #514869; /* Cor de fundo roxa média. */
+  color: #f0ffffde; /* Cor do texto. */
+  font-size: 12pt; /* Tamanho da fonte. */
+  box-shadow: 0px 10px 40px #00000056; /* Sombra nos campos. */
+  outline: none; /* Remove o contorno ao focar. */
+  box-sizing: border-box; /* Inclui borda e preenchimento no tamanho total. */
+}
+
+/* Estiliza os rótulos acima dos campos de entrada. */
+.textfield > label {
+  color: #f0ffffde; /* Cor do texto do rótulo. */
+  margin-bottom: 10px; /* Espaçamento inferior. */
+}
+
+/* Estiliza os placeholders (texto de sugestão nos campos). */
+.textfield > input::placeholder {
+  color: #f0ffff94; /* Cor mais clara que o texto normal. */
+}
+
+/* Estiliza o botão de login. */
+.btn-login {
+  width: 100%; /* Ocupa 100% da largura do cartão. */
+  padding: 16px 0; /* Altura do botão. */
+  margin: 25px; /* Espaçamento ao redor do botão. */
+  border: none; /* Remove borda padrão. */
+  border-radius: 8px; /* Bordas arredondadas. */
+  outline: none; /* Remove contorno ao focar. */
+  text-transform: uppercase; /* Converte texto para maiúsculas. */
+  font-weight: 800; /* Texto em negrito. */
+  letter-spacing: 3px; /* Espaçamento entre letras. */
+  color: #2b134b; /* Cor do texto. */
+  background: #00ff88; /* Cor de fundo verde neon. */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse. */
+  box-shadow: 0px 10px 40px -12px #00ff8052; /* Sombra reduzida no botão. */
+}
+
+/* Define estilos responsivos para telas com largura máxima de 950px. */
+@media only screen and (max-width: 950px){
+  .card-login{
+    width: 85%; /* Reduz a largura do cartão. */
+  }
+}
+
+/* Define estilos responsivos para telas com largura máxima de 600px. */
+@media only screen and (max-width: 600px){
+  .main-login{
+    flex-direction: column; /* Alinha as seções em coluna. */
+  }
+
+  .left-login > h1 {
+    display: none; /* Esconde o título na seção esquerda. */
+  }
+
+  .left-login {
+    width: 100%; /* Altera a largura para ocupar toda a tela. */
+    height: auto; /* Ajusta a altura automaticamente. */
+  }
+
+  .right-login {
+    width: 100%; /* Altera a largura para ocupar toda a tela. */
+    height: auto; /* Ajusta a altura automaticamente. */
+  }
+
+  .left-login-image {
+    width: 40vh; /* Reduz a largura da imagem proporcionalmente à altura da tela. */
+  }
+
+  .card-login {
+    width: 90%; /* Reduz a largura do cartão para melhor ajuste. */
+  }
+}
